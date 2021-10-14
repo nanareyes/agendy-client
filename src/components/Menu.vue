@@ -13,7 +13,9 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <router-link to="/portafolioServicios" class="btn btn-action">Servicios </router-link>
+                      <router-link to="/portafolioServicios" class="nav-link mx-4"
+                        >Servicios</router-link
+                      >
                     </li>
                     <li class="nav-item">
                       <button type="button" @click="logOut"> Salir</button> 
