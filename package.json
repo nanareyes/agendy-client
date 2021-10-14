@@ -2,6 +2,7 @@
   "name": "agendy",
   "version": "0.1.0",
   "private": true,
+  "engines" : { "node" : ">=16.9" },
   "scripts": {
     "start": "node server.js",
     "serve": "vue-cli-service serve",
