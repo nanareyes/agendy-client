@@ -65,7 +65,7 @@ export default {
     	    )
     	},
     	cargarServicios(){
-    	    axios.get('http://localhost:3000/api/servicios')
+    	    axios.get('https://agendy-api.herokuapp.com/api/servicios')
     	     //promesa
     	    .then(response => {
 	        let status_peticion = response.status

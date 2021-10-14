@@ -143,7 +143,7 @@ export default {
         registraruser () {
             console.log(this.user)
             if (this.user.password === this.user.password2){
-                axios.post('http://localhost:3000/api/nuevo-user',
+                axios.post('https://agendy-api.herokuapp.com/api/nuevo-user',
                 this.user
                 )
                 .then(response => {

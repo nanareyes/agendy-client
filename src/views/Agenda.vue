@@ -135,7 +135,7 @@ export default {
                 email: this.agenda.email,
                 telefono:this.agenda.telefono,
             }
-            axios.post('http://localhost:3000/api/nueva-agenda',
+            axios.post('https://agendy-api.herokuapp.com/api/nueva-agenda',
             cita
             )
             .then(response => {
@@ -166,7 +166,7 @@ export default {
         //         email: this.agenda.email,
 
         //     }
-        //     axios.post('http://localhost:3000/api/nueva-agenda-login',
+        //     axios.post('https://agendy-api.herokuapp.com/api/nueva-agenda-login',
         //     cita_login
         //     )
         //     .then(response => {
