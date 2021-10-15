@@ -1,5 +1,7 @@
 <template>
     <div class="portafolioServicios">
+        <NavBar />
+        
     <div class="card text-center">
             <div class="card-header section-title">
                 Bienvenido a su página principal, {{datosUsuario.nombres}}
@@ -46,17 +48,23 @@
 </template>
 
 <script>
-export default {
-  name: "Inicio",
+import NavBar from "@/components/NavBar.vue";
 
-  data(){
-    const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'))
-        return {
-            datosUsuario,
-      
+export default {
+    name: "Inicio",
+
+    data(){
+        const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'))
+            return {
+                datosUsuario,
+
     }
-  },
+    },
+    components: {
+        NavBar
+    },
 
 }
 
-</script>
+<script>
+

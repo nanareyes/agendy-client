@@ -1,8 +1,10 @@
 <template>
-    <div class="registro-user">
-        <div class="section-1" >
-            <p class="section-text">Registro de Usuarios</p>
-            <form>
+    <div>
+            <b-card img-src="https://st4.depositphotos.com/12982378/19880/i/600/depositphotos_198800338-stock-photo-partial-view-woman-receiving-bath.jpg"  fluid-grow alt="Fluid-grow image" img-alt="Card image" img-left class="mb-3" >
+
+
+                <b-card-text>
+                    <form>
                 <div class="container-registro">
                     <div class="row registro1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         
@@ -98,22 +100,24 @@
                             </div>
                         </div>
                         <div class="campos-formulario form-group">
-                            <input @click="registraruser()" class="btn btn-primary" tabindex="-1" role="button" value="Registrar">
+                            <input @click="registrarUser()" class="btn btn-primary" tabindex="-1" role="button" value="Registrar">
                         </div>
                     
                     </div>
                 </div>
             </form>
-        </div>
-        
-        <div class="back">
-            <router-link to="/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
-        </div>
+
+        </b-card-text>
+    </b-card> 
+    <div class="back">
+        <router-link to="/home" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
     </div>
+</div>
 </template>
 
 <script>
 import axios from 'axios';
+import {login} from '../libs/user';
 
 export default {
     data () {
@@ -140,7 +144,7 @@ export default {
     },
         
     methods: {
-        registraruser () {
+        registrarUser () {
             console.log(this.user)
             if (this.user.password === this.user.password2){
                 axios.post('https://agendy-api.herokuapp.com/api/nuevo-user',
@@ -156,7 +160,8 @@ export default {
                             'Se ha resgistrado con el usuario ' + this.user.email,
                             'success'
                         )
-                        this.$router.push("/")
+                        login(this)
+                        // this.$router.push("/portafolioServicios")
                     } else {
                         this.$swal.fire(
                             'user NO registrado',

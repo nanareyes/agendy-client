@@ -5,12 +5,12 @@ body {
 }
 
 .navigations {
-    width: 1200px;
     background-color: #FAF4EB;
     -ms-flex-item-align: center;
     align-self: center;
     margin: 0px auto;
     padding: 0 auto;
+    /* width: 60%; */
 }
 
 .header {
@@ -215,8 +215,7 @@ body {
 
 
 .container-footer-all {
-    width: 100%;
-    max-width: 700px;
+
     margin: auto;
     padding: 50px;
 
@@ -353,13 +352,12 @@ div.section-title {
 }
 
 .container-footer2 {
-    width: 100%;
+
     background: #e7cdf1;
 
 }
 
 .footer2 {
-    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -651,7 +649,7 @@ footer {
     height: 24px;
 }
 
-a.btn-action, button.btn-action {
+a.btn-action, button.btn-action, button.btn-primary {
     background-color: #d7b1e6;
     color: black;
     font-weight: 500;

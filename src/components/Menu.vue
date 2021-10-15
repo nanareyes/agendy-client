@@ -63,6 +63,16 @@
                         >Equipo</router-link
                       >
                     </li>
+                    <li class="nav-item">
+                    <router-link to="/home" class="nav-link mx-4"
+                        >prueba</router-link
+                      >
+                    </li>
+                    <li class="nav-item">
+                    <router-link to="/navbar" class="nav-link mx-4"
+                        >barr</router-link
+                      >
+                    </li>
                   </ul>
                   
                 </div>

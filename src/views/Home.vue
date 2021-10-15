@@ -1,220 +1,148 @@
 <template>
-  <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo1.png"> -->
-    <!-- <HelloWorld msg="Bienvenidos a Agendy Nails"/> -->
-    <BarraMenu />
+    <div>
+    
+        <b-card
+            overlay
+            img-src="https://st4.depositphotos.com/12982378/19880/i/600/depositphotos_198800338-stock-photo-partial-view-woman-receiving-bath.jpg" 
+            img-alt="Card Image"
 
-      <div class="card text-center section-services" id="services">
-        <div class="card-header section-title">Sección Servicios
-        </div>
-          <div class="card-body section-body">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-service-image">
-                    <img src="@/assets/images/registro.jpg" class="card-img-top" alt="Registro">
-                  </div>
-                <div class="card-body">
-                  <h4 class="card-title">Registro de Usuarios</h4>
-                  <div class="card-text">
-                    <div class="d-grid gap-2">
-                        <router-link to="/user" class="btn btn-action">Registrese aquí </router-link>
-                        <!-- <router-link to="/registroCliente" class="btn btn-action">Registro Clientes </router-link> -->
-                    </div>
-                  </div>
-                
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-service-image">
-                  <img src="@/assets/images/registro2.jpg" class="card-img-top" alt="Login">
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">Inicio de Sesión</h4>
-                  <div class="card-text">
-                    <div class="d-grid gap-2">
-                      <router-link to="/login" class="btn btn-action">Iniciar sesión</router-link>
-                      <!-- <router-link to="/iniciocliente" class="btn btn-action">Iniciar sesión Clientes </router-link> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-service-image">
-                  <img src="@/assets/images/una.png" class="card-img-top" alt="Portafolio">
-                </div>
-                <div class="card-body">
-                  <h4 class="card-title">Portafolio de Servicios</h4>
-                  <div class="card-text"> Conoce nuestro portafolio de servicios.
-                    <div class="d-grid gap-2">
-                      <router-link to="/portafolioServicios" class="btn btn-action">Ver más </router-link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card text-center section-news" id="news">
-        <div class="card-header section-title">
-            Sección Noticias
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body section-body">
-                <div class="row g-0">
-                  <div class="col-md-4 img-news">
-                    <img src="@/assets/images/new1.jpg" class="img-fluid rounded-start " alt="Noticia 1">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Análisis del sector cosmético colombiano en época
-                          Covid-19</h5>
-                      <p class="card-text">Colombia es uno de los principales países exportadores del sector cosmético de América Latina, ocupando el tercer lugar después de Brasil y México..</p>
+        >
+            <div class="left-center">
+        
+                <main class="form-signin">   
+                    <form>
+                        <img  class="mb-4" src="@/assets/images/logo.png" alt="" width="100px" height="90px">
+                        <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
 
-                      <a href="https://h2gconsulting.com/how2go-colombia/analisis-del-sector-cosmetico-colombiano-en-epoca-covid-19/"
-                        class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Ver más</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                        <div class="form-floating">
+                        <input v-model="user.email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Correo electrónico</label>
+                        </div>
+                        <div class="form-floating">
+                        <input v-model="user.password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Constraseña</label>
+                        </div>
+                        <!-- <button @click="loginUser()" class= "w-100 btn btn-lg btn-primary btn-action" type="submit">Ingresar</button> -->
+                        <input @click="loginUser()" class="w-100 btn btn-lg btn-primary" tabindex="-1" role="button" value="Ingresar">
+                        <p class="mt-5 mb-3 text-muted">&copy; Derechos registrados 2021</p>
+                    </form>
+                </main>   
+                <div> Si aún no tienes cuenta ingresa aquí:  </div><router-link to="/user" class="nav-link mx-4"
+                        >Registrarse</router-link>
             </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body section-body">
-                <div class="row g-0">
-                  <div class="col-md-4 img-news">
-                    <img src="@/assets/images/new2.jpg" style="height: 230px;" class="img-fluid rounded-start " alt="Noticia 1">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Estudio de mercado. El mercado de belleza y cuidado personal en Colombia</h5>
-                      <p class="card-text">Colombia es el cuarto mercado de belleza y cuidado personal de Latinoamérica con unas ventas en 2019 que ascienden...</p>
+            
+        </b-card>
 
-                      <a href="https://www.icex.es/icex/es/navegacion-principal/todos-nuestros-servicios/informacion-de-mercados/paises/navegacion-principal/el-mercado/estudios-informes/DOC2020865687.html?" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Ver más</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body section-body">
-                <div class="row g-0">
-                  <div class="col-md-4 img-news">
-                    <img src="@/assets/images/new3.jpg" style="height: 260px;" class="img-fluid rounded-start " alt="Noticia 1">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">La industria del maquillaje busca la recuperación</h5>
-                      <p class="card-text">Si algún producto ha sentido el golpe de la pandemia es el labial, que por el tapabocas quedó de lado para las mujeres. Sin embargo, la industria trabaja en fórmulas que garanticen duración st...</p>
-
-                      <a href="https://www.semana.com/contenidos-editoriales/colombia-querer-es-vencer/articulo/peluquerias-se-reinventan-por-cuarentena/665486/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Ver más</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body section-body">
-                <div class="row g-0">
-                  <div class="col-md-4 img-news">
-                    <img src="@/assets/images/new4.jpg" class="img-fluid rounded-start " alt="Noticia 1">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Se reactivarán las peluquerías? </h5>
-                      <p class="card-text">“La Federación Nacional de Departamentos (FND) presentó una solicitud al Gobierno nacional para que autorice la reactivación del sector de las peluquerías y salones de belleza bajo estrictos protocolos de bioseguridad ...</p>
-
-                      <a href="https://www.semana.com/nacion/articulo/coronavirus-se-reactivaran-las-peluquerias/671595/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Ver más</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="card text-center section-teams" id="team">
-        <div class="card-header section-title"> Sección Equipo
-        </div>
-        <div class="card-group body-team">
-          <div class="card mx-2">
-            <div class="team-member-image"><img src="@/assets/images/photoNana.jpg" alt="Avatar" class="avatar"></div>
-            <div class="card-body">
-              <h5 class="card-title">Diana Carolina Reyes Mantilla</h5>
-              <p class="card-text">Especialista en Gerencia Estratégica y profesional Administración y Negocios Internacionales.</p>
-            </div>
-          </div>
-          <div class="card mx-2">
-            <div class="team-member-image"><img src="@/assets/images/natacha.jpg" alt="Avatar" class="avatar"></div>
-            <div class="card-body">
-              <h5 class="card-title">Natacha Libreros</h5>
-              <p class="card-text">Economista Y técnico en contabilidad y finanzas.</p>
-            </div>
-          </div>
-          <div class="card mx-2">
-            <div class="team-member-image"><img src="@/assets/images/irma.jpg" alt="Avatar" class="avatar"></div>
-            <div class="card-body">
-              <h5 class="card-title">Irma Zoraida Cardenas</h5>
-              <p class="card-text">Administradora de empresas especializadas en proyectos. </p>
-            </div>
-          </div>
-          <div class="card mx-2">
-            <div class="team-member-image"><img src="@/assets/images/photoCamila.jpg" alt="Avatar" class="avatar"></div>
-            <div class="card-body">
-              <h5 class="card-title">Camila Acosta Nieto</h5>
-              <p class="card-text">Estudiante de Estadística.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        
     </div>
 
 </template>
 
+
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-import BarraMenu from "@/components/Menu.vue";
+import axios from 'axios';
+import jwt from 'jsonwebtoken';
 
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-    BarraMenu,
-  },
+    data () {
+        return {
+            user: {
+                email: '',
+                password: ''
 
-  data(){
-    const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario')) || {}
-    const token = localStorage.getItem('token') || null
-    const logueado = token != null
-    console.log(logueado)
+            }
+        }
+    },
+        
+    methods: {
+        loginUser () {
+            axios.post('https://agendy-api.herokuapp.com/login',
+            this.user
+            )
+            .then(response => {
+                //console.log(response)
+                const status_peticion = response.status
+                const token = response.data.token
+                //console.log(status_peticion)
+                if (status_peticion === 200) {
+                    localStorage.setItem('token', token)
 
-    datosUsuario.logueado = logueado
-    console.log('datos usuario en inicio', datosUsuario)
-    return {
-      logueado,
-      datosUsuario
-
+                    jwt.verify(token, 'secret',
+                        (err, datosToken) => {
+                            if (err) {
+                                this.$swal.fire(
+                                        'Error token',
+                                        'Token no es válido',
+                                        'error'
+                                )
+                            } else {
+                                // console.log('decoded token:', decoded)
+                                // Guardar el token decodificado en el localStorage
+                                localStorage.setItem('datosUsuario', JSON.stringify(datosToken.data))
+                                // Del token se lee el tipo de usuario: Cliente o Estilista
+                                const tipo = datosToken.data.tipo
+                                this.$router.push("portafolioServicios")
+                                // if (tipo === 'Estilista') {
+                                //     this.$router.push("/")
+                                // } else {
+                                //     this.$router.push("/")
+                                // }
+                            }
+                    });
+                } else {
+                    this.$swal.fire(
+                        'Usuario NO registrado',
+                        'Ocurrió un error al ingresar con el correo ' + this.user.email,
+                        'error'
+                    )
+                }
+                let mensaje = response.data
+                //console.log(mensaje)
+            })
+        }
     }
-
-  }
-};
+}
 
 </script>
 
+<style>
+    body {
+    height: 100%;
+    }
+
+    body {
+    display: flex;
+    align-items: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color:#FAF4EB;
+    }
+
+    .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    }
+
+    .form-signin .checkbox {
+    font-weight: 400;
+    }
+
+    .form-signin .form-floating:focus-within {
+    z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    };
+
+</style>

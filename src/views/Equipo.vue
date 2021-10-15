@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="back">
-          <router-link to="/" class="btn btn-action">Volver</router-link>
+          <router-link to="portafolioServicios" class="btn btn-action">Regresar </router-link>
         </div>
       </div>
 </template>

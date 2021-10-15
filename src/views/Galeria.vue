@@ -5,7 +5,7 @@
                 Galería de Fotos
             </div>
             <div class="card-body section-body">
-                <div class="row row-cols-1 row-cols-md-5 g-3 ms-5">
+                <div class="row row-cols-1 row-cols-md-5 g-3 justify-content-center">
                     <div v-for="foto in fotos" class="col" :key="foto.id">
                         <FotoServicio :src="foto.src" :description="foto.description" />
                     </div>

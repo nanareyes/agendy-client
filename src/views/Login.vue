@@ -26,7 +26,7 @@
             </div>
         </div>
         <div>
-            <router-link to="/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
+            <router-link to="/portafolioServicios" class="btn btn-action">Regresar </router-link>
         </div>
     </div>
 
@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-import jwt from 'jsonwebtoken';
+
+import {login} from '../libs/user';
 
 export default {
     data () {
@@ -50,49 +50,7 @@ export default {
         
     methods: {
         loginUser () {
-            axios.post('https://agendy-api.herokuapp.com/login',
-            this.user
-            )
-            .then(response => {
-                //console.log(response)
-                const status_peticion = response.status
-                const token = response.data.token
-                //console.log(status_peticion)
-                if (status_peticion === 200) {
-                    localStorage.setItem('token', token)
-
-                    jwt.verify(token, 'secret',
-                        (err, datosToken) => {
-                            if (err) {
-                                this.$swal.fire(
-                                        'Error token',
-                                        'Token no es válido',
-                                        'error'
-                                )
-                            } else {
-                                // console.log('decoded token:', decoded)
-                                // Guardar el token decodificado en el localStorage
-                                localStorage.setItem('datosUsuario', JSON.stringify(datosToken.data))
-                                // Del token se lee el tipo de usuario: Cliente o Estilista
-                                const tipo = datosToken.data.tipo
-                                this.$router.push("portafolioServicios")
-                                // if (tipo === 'Estilista') {
-                                //     this.$router.push("/")
-                                // } else {
-                                //     this.$router.push("/")
-                                // }
-                            }
-                    });
-                } else {
-                    this.$swal.fire(
-                        'Usuario NO registrado',
-                        'Ocurrió un error al ingresar con el correo ' + this.user.email,
-                        'error'
-                    )
-                }
-                let mensaje = response.data
-                //console.log(mensaje)
-            })
+            login(this)
         }
     }
 }

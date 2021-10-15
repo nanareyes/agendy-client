@@ -8,7 +8,7 @@
 
                 <div class="card mb-3" style="max-width: 100%;">
                     <div class="card-body">
-                        <h5 class="card-title">Agenda tu agenda</h5>
+                        <h5 class="card-title">Reserva tu agenda</h5>
                         <p class="card-text">Por favor ingresa la siguiente información para poder agenda tu agenda</p>
                     </div>
                     <div class="row g-0">
@@ -91,9 +91,7 @@
                 <div>
                 <router-link to="portafolioServicios" class="btn btn-action">Regresar </router-link>
                 </div>
-                <div>
-                <router-link to="/" class="btn btn-action">Ir a la página principal </router-link>
-                </div>
+                
             </div>
         </div>
     </div>

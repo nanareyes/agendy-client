@@ -8,7 +8,6 @@
     </div>  -->
 
     <router-view/>
-
     <footer>
     <div>
       <div class="row">

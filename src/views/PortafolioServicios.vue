@@ -1,6 +1,6 @@
 <template>
-    <div class="home">
-        <BarraMenu />
+    <div class="paginaPrincipal">
+        <NavBar />
             <div class="portafolioServicios">
             <div class="card text-center">
                     <div class="card-header section-title">
@@ -8,7 +8,7 @@
                     </div>
                     <div class="card-body navigations">
 
-                        <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="row row-cols-1 row-cols-md-5 g-3 justify-content-center">
                             <div class="col">
                                 <div class="card h-100">
                                     <img src="@/assets/images/semipermanente.jpg" class="card-img-top h-100 pt-3" alt="semipermanente">
@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
+                        <!-- <router-link to="/" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link> -->
                     
                     </div>
                 </div>
@@ -55,12 +55,12 @@
 
 </template>
 <script>
-import BarraMenu from "@/components/Menu.vue";
+import NavBar from "@/components/NavBar.vue";
 
 export default {
-  name: "Home",
+  name: "https://agendy-api.herokuapp.com",
   components: {
-    BarraMenu,
+    NavBar,
   },
   data(){
     const token = localStorage.getItem('token') || null
