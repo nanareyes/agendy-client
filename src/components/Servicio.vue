@@ -1,25 +1,25 @@
 <template>
   <div>
-    <div class="card h-100 pb-2">
-      <img :src="src" class="card-img-top pb-2" />
+    <div class="card h-100 pb-2"> 
+      <!-- <img :src="src" class="card-img-top pb-2" />
       <div class="card-body">
         <h4 class="card-title">{{ title }}</h4>
         <p class="card-text">{{ shortDescription }}</p>
-      </div>
+      </div>  -->
       <b-button v-b-modal="id" class="btn-action"> Ver Más</b-button>
-    </div>
+    </div> 
 
     <b-modal :id="id" :title="title" cancel-disabled="true">
       <div class="card">
         <img :src="src" class="card-img-top" />
         <div class="card-body">
-          <h5 class="card-title">{{ title }}</h5>
+          <h5 class="card-title">{{ servicio.nombre }}</h5>
           <p class="card-text">{{ fullDescription }}</p>
         </div>
       </div>
     </b-modal>
   </div>
-</template>
+</template> 
 
 <script>
 export default {
@@ -31,5 +31,6 @@ export default {
     shortDescription: String,
     fullDescription: String,
   },
-};
-</script>
+
+}
+</script> */

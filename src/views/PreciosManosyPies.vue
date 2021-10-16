@@ -1,27 +1,31 @@
 <template>
+<div>
+	<NavBar />
     <div class="servicios">
-        <div class="card text-center">
+		
+        <div class="card h-100 pb-2 text-center">
             <div class="card-header section-title">
-            Bienvenido a Nuestro Portafolio de Servicios
+            Bienvenido al portafolio de servicios
             </div>
             <div class="card-body section-body h-100">
-                <div class="row row-cols-1 row-cols-md-5 g-4"> 
+                <div class="row row-cols-1 row-cols-md-5 g-4"> 						
+
                     <div v-for="servicio in servicios" :key="servicio.id" class="card pb-3 pt-3">
-                        <img class="card-img-top pb-2" :src="getPictureServicio(servicio.imagen)">
+                        <img class="card-img-top pb-2 foto" :src="getPictureServicio(servicio.imagen)">
                         <div>
                             <h1 class="card-title">{{servicio.nombre}}</h1>
                             <h3 class="card-title">{{servicio.precio}}</h3>
                             <div class="card-text">
                             <p>{{servicio.descripcion}}</p>
-	                        </div>
+	                    </div>
                         </div>
 	                    <div id="icono">
-	                        <i class="las la-cart-arrow-down estilo-icono" @click="agregarAlCarrito(servicio)"></i>
+	                    <i class="las la-cart-arrow-down estilo-icono" @click="agregarAlCarrito(servicio)"></i>
 	                    </div>
                     </div>
                 </div>
             </div>
-            <div >
+            <div class="total" >
                 <h1>TOTAL</h1>
                 <h2 id="total_carrito">${{total_carrito}}</h2>
             </div> 
@@ -29,17 +33,18 @@
                 <router-link to="/portafolioServicios" class="btn btn-action" tabindex="-1" role="button" aria-disabled="true">Volver</router-link>
             </div>
 	    </div>
-        
+    </div>
 	</div>
         
 </template>
 <script>
-//import Servicio from "@/components/Servicio.vue";
-	
+import NavBar from "@/components/NavBar.vue";
 import axios from 'axios'
+import Servicio from "@/components/Servicio.vue";
 export default {
-	data () {
-	    return {
+	components: { Servicio, NavBar },
+    data(){
+        return {
 	        servicios: [],
 	        carrito: [],
 	        total_carrito: 0
@@ -79,10 +84,16 @@ export default {
 
 <style scoped>
 .estilo-icono {
-    font-size: 24px;
+    font-size: 40px;
     border-style: outset;
     background-color: #d7b1e6;
+	border-radius: 5px;
 }
-
+.foto{
+	max-height: 400px;
+}
+.total{
+	background-color: #FAF4EB;
+}
 
 </style>

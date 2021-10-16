@@ -1,19 +1,29 @@
 <template>
     <div class="separatuTurno">
+        <NavBar/>
         <div class="card text-center">
             <div class="card-header section-title">
                 Nuestra Agenda
             </div>
-            <div class="card-body section-body">
+            <div class="card-body">
 
-                <div class="card mb-3" style="max-width: 100%;">
-                    <div class="card-body">
+                <div class="card section-body mb-3">
+                    <div class="card-body section-body">
                         <h5 class="card-title">Reserva tu agenda</h5>
                         <p class="card-text">Por favor ingresa la siguiente información para poder agenda tu agenda</p>
                     </div>
-                    <div class="row g-0">
+                    <div class="row section-body g-0">
                         <div class="col-md-4"> 
-                            <img src="@/assets/images/calendar.png" class="img-fluid rounded-start photo" alt="semi">
+                            <!-- <img src="@/assets/images/calendar.png" class="img-fluid rounded-start photo" alt="semi"> -->
+                    
+                                <b-col md="auto">
+                                <b-calendar v-model="value" @context="onContext" locale="en-US"></b-calendar>
+                                </b-col>
+                                <!-- <b-col>
+                                <p>Value: <b>'{{ value }}'</b></p>
+                                <p class="mb-0">Context:</p>
+                                <pre class="small">{{ context }}</pre>
+                                </b-col> -->
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -89,7 +99,7 @@
                     </div>
                 </div>
                 <div>
-                <router-link to="portafolioServicios" class="btn btn-action">Regresar </router-link>
+                <router-link to="/portafolioServicios" class="btn btn-action">Regresar </router-link>
                 </div>
                 
             </div>
@@ -99,13 +109,17 @@
 
 <script>
 import axios from 'axios';
-
+import NavBar from "@/components/NavBar.vue";
 const token = localStorage.getItem('token')
 const datosUsuario = JSON.parse (localStorage.getItem('datosUsuario'))
 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
 
 export default {
+    
+  components: {
+    NavBar,
+  },
     data () {
         return {
             agenda: {

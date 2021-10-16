@@ -1,6 +1,6 @@
 <template>
     <div>
-            <b-card img-src="https://st4.depositphotos.com/12982378/19880/i/600/depositphotos_198800338-stock-photo-partial-view-woman-receiving-bath.jpg"  fluid-grow alt="Fluid-grow image" img-alt="Card image" img-left class="mb-3" >
+        <b-card img-src="https://st4.depositphotos.com/12982378/19880/i/600/depositphotos_198800338-stock-photo-partial-view-woman-receiving-bath.jpg"  fluid-grow alt="Fluid-grow image" img-alt="Card image" img-left class="mb-3" >
 
 
                 <b-card-text>
@@ -90,9 +90,9 @@
                             </div> -->
                         </div>
                         <br>
-                        <div class="campos-formulario form-group mb-3 text-start mx-3 ">
-                            <div class="form-check">
-                                <label>He leído y acepto el tratamiento de mis datos</label>
+                        <div class="campos-formulario form-group mb-3 text-start mx-3 ps-5">
+                            <div class="form-check ps-5">
+                                <label-align-sm>He leído y acepto el tratamiento de mis datos</label-align-sm>
                                 <input v-model="user.terminos" type="checkbox" class="form-check-input is-invalid" id="tratamiento_datos" name="tratamiento_datos" required>
                                 <div class="invalid-feedback">
                                     Debes aceptar los términos y condiciones antes de enviar

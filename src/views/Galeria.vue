@@ -1,5 +1,6 @@
 <template>
     <div class="galeria">
+        <NavBar />
         <div class="card text-center">
             <div class="card-header section-title">
                 Galería de Fotos
@@ -21,8 +22,11 @@
 
 <script>
 import FotoServicio from "@/components/FotoServicio.vue";
+import NavBar from "@/components/NavBar.vue";
 export default {
-  components: { FotoServicio },
+  components: { 
+        FotoServicio,
+        NavBar},
     data() {
         // Metodo 1. Manual, cada foto se incluye con su src y descripcion
         // return {

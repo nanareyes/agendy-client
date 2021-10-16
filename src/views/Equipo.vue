@@ -1,4 +1,6 @@
 <template>
+ <div>
+  <NavBar />
     <div class="card text-center section-teams" id="team">
         <div class="card-header section-title"> Sección Equipo
         </div>
@@ -36,4 +38,14 @@
           <router-link to="portafolioServicios" class="btn btn-action">Regresar </router-link>
         </div>
       </div>
+ </div>
 </template>
+
+<script>
+import NavBar from "@/components/NavBar.vue";
+export default {
+  components: {
+    NavBar,
+  }
+}
+</script>

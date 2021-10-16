@@ -1,5 +1,6 @@
 <template>
     <div class="servicios">
+    <NavBar />
     <div class="card text-center">
             <div class="card-header section-title">
                 Bienvenido a Nuestro Portafolio de Servicios
@@ -86,9 +87,11 @@
 
 <script>
 import Servicio from "@/components/Servicio.vue";
+import NavBar from "@/components/NavBar.vue";
+
 
 export default {
-    components: { Servicio },
+    components: { Servicio, NavBar },
     data(){
         return {
             foto1: require("@/assets/images/semipermanente2.jpg"),

@@ -1,7 +1,7 @@
 <template>
-    <div>
-    
-        <b-card
+    <div class="cover-container h-100  flex-column">  
+
+        <b-card 
             overlay
             img-src="https://st4.depositphotos.com/12982378/19880/i/600/depositphotos_198800338-stock-photo-partial-view-woman-receiving-bath.jpg" 
             img-alt="Card Image"
@@ -106,18 +106,16 @@ export default {
 </script>
 
 <style>
-    body {
-    height: 100%;
-    }
+
 
     body {
-    display: flex;
-    align-items: left;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    display: auto;
     background-color:#FAF4EB;
     }
 
+    .flex-column{
+        min-height: 600px;
+    }
     .form-signin {
     width: 100%;
     max-width: 330px;
