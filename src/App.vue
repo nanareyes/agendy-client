@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3 col-xs-12 col-sm-12 col-md-6">
+        <div class="col-3 col-xs-12 col-sm-12 col-md-3">
           <h5>Redes Sociales</h5>
           <div class="row ">
             <div class="col-1">
@@ -59,13 +59,13 @@
         </div>
 
 
-        <div class="col-3 col-xs-12 col-sm-12 col-md-12">
+        <div class="col-3 col-xs-12 col-sm-12 col-md-3">
           <h5> Informacion Contacto</h5>
           <div class="row">
             <div class="col-12 text-start"> <i class="fa-solid fa-house fa-lg mx-3"></i><label>Aca se coloca la direccion de la empresa</label> </div>
           </div>
 
-          <div class="row mt-2 xs-12 sm-6 md-6 lg-4 xl-3">
+          <div class="row">
             
             <div class="col-12">
               <ul class="phone">
@@ -77,14 +77,14 @@
             </div>
           </div>
 
-          <div class="row mt-2 xs-12 sm-6 md-6 lg-4 xl-3">
+          <div class="row">
             <div class="col-12 text-start"><i class="fa-solid fa-envelope fa-lg mx-3"></i><label>email@email.com</label></div>
           </div>
         </div>
       </div>
 
       <div class="container-footer2 foot2 row ">
-        <div class="footer2 xs-12 sm-6 md-6 lg-4 xl-3">
+        <div class="footer2">
           <div class="copyright">© Todos los derechos reservados |
             <a href="https://github.com/nanareyes/Proyecto-Ciclo-3/blob/development/index.html" target="_blanck">Acceso al Git</a>
           </div>
