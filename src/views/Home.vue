@@ -24,11 +24,12 @@
                         </div>
                         <!-- <button @click="loginUser()" class= "w-100 btn btn-lg btn-primary btn-action" type="submit">Ingresar</button> -->
                         <input @click="loginUser()" class="w-100 btn btn-lg btn-primary" tabindex="-1" role="button" value="Ingresar">
-                        <p class="mt-5 mb-3 text-muted">&copy; Derechos registrados 2021</p>
                     </form>
                 </main>   
-                <div> Si aún no tienes cuenta ingresa aquí:  </div><router-link to="/user" class="nav-link mx-4"
+                <div> Si aún no tienes cuenta ingresa aquí:</div><router-link to="/user" class="nav-link mx-4"
                         >Registrarse</router-link>
+                <p class="mt-5 mb-3 text-muted">&copy; Derechos registrados 2021</p>
+                        
             </div>
             
         </b-card>
