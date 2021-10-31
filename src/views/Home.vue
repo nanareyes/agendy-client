@@ -11,7 +11,8 @@
         
                 <main class="form-signin">   
                     <form>
-                        <img  class="mb-4" src="@/assets/images/logo.png" alt="" width="100px" height="90px">
+                        <img  class="mb-4" src="@/assets/images/logoAgendy
+                        .png" alt="" width="100px" height="90px">
                         <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
 
                         <div class="form-floating">
