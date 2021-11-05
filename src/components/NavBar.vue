@@ -16,52 +16,48 @@
 
           <b-navbar-nav class="ml-auto">
             <b-nav-item right>
-                <!-- Using 'button-content' slot -->
-                  <span>
-                    <strong> Bienvenid@ {{datosUsuario.nombres}}</strong>
-                  </span>
-                <b-button size="sm" class="mx-2 my-2 my-sm-0 btn-action" type="button" @click="logOut">Salir</b-button>
-            </b-nav-item>   
-          </b-navbar-nav>     
-              
-        
+              <!-- Using 'button-content' slot -->
+              <span>
+                <strong> Bienvenid@ {{ datosUsuario.nombres }}</strong>
+              </span>
+              <b-button
+                size="sm"
+                class="mx-2 my-2 my-sm-0 btn-action"
+                type="button"
+                @click="logOut"
+                >Salir</b-button
+              >
+            </b-nav-item>
+          </b-navbar-nav>
         </b-collapse>
       </b-navbar>
     </div>
   </div>
-
-
-
 </template>
 
 <script>
 export default {
   name: "NavBar",
-  data(){
-    const datosUsuario = JSON.parse(localStorage.getItem('datosUsuario')) || {}
-    const token = localStorage.getItem('token') || null
-    const logueado = token != null
-    console.log(logueado)
+  data() {
+    const datosUsuario = JSON.parse(localStorage.getItem("datosUsuario")) || {};
+    const token = localStorage.getItem("token") || null;
+    const logueado = token != null;
+    console.log(logueado);
 
-    datosUsuario.logueado = logueado
-    console.log('datos usuario en inicio', datosUsuario)
-    const logOut = async () =>  {
-      await localStorage.clear()
-      location.replace('/')
-      this.$router.push({ name: home })
-
-    }
+    datosUsuario.logueado = logueado;
+    console.log("datos usuario en inicio", datosUsuario);
+    const logOut = async () => {
+      await localStorage.clear();
+      location.replace("/");
+      this.$router.push({ name: home });
+    };
     return {
       logueado,
       datosUsuario,
-      logOut
-    }
-
+      logOut,
+    };
   },
-    
-
-  }
-
+};
 </script>
 
 <style scoped>
@@ -71,6 +67,9 @@ export default {
   color: #b02b9b;
 }
 #banner {
-  background-color: #FAF4EB;
+  background-color: #faf4eb;
+}
+.navbar {
+  padding: 0.5rem 2rem;
 }
 </style>
