@@ -1,6 +1,6 @@
 <template>
   <div class="color-bar">
-    <div v-if="logueado">  
+    <div v-if="logueado">
       <b-navbar toggleable="lg" type="light" variant="light" class="fs-5">
         <b-navbar-brand href="#" class="fs-3">Agendy</b-navbar-brand>
 
@@ -8,8 +8,8 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="/portafolioServicios" >Servicios</b-nav-item>
-            <b-nav-item href="/agenda" >Agenda</b-nav-item>
+            <b-nav-item href="/portafolioServicios">Servicios</b-nav-item>
+            <b-nav-item href="/agenda">Agenda</b-nav-item>
             <b-nav-item href="/equipo">Nuestro Equipo</b-nav-item>
             <b-nav-item href="/noticias">Sección Noticias</b-nav-item>
           </b-navbar-nav>

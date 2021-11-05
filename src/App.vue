@@ -72,8 +72,10 @@
               <ul class="phone">
                 <li><i class="fa-solid fa-phone fa-lg mx-3" ></i>+57 320 692 2383</li>
                 <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 320 748 3074</li>
-                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 300 477 7527</li>
-                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 319 245 5093</li>
+                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+34 600715253</li>
+                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 318 6977658</li>
+                <li><i class="fa-solid fa-phone fa-lg mx-3"></i>+57 319 5723583</li>
+                
               </ul>
             </div>
           </div>
