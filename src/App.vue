@@ -9,7 +9,7 @@
 
     <router-view />
     <footer>
-      <div>
+      
         <div class="row">
           <div class="col-6 col-xs-12 col-sm-12 col-md-6">
             <div class="row mx-2">

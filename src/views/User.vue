@@ -27,7 +27,7 @@
                                     required class="formato">
                             </div>
 
-                            <div class="campos-formulario">
+                            <!-- <div class="campos-formulario">
                                 <label>Fecha de nacimiento</label><br>
                                 <input v-model="user.fechaNacimiento"  type="date" id="fechaNacimiento" name="fechaNacimiento" required class="formato">
                             </div>
@@ -47,7 +47,7 @@
                                 <label>Departamento</label><br>
                                 <input v-model="user.departamento"  type="text" id="departamento" name="departamento"
                                     placeholder="Ingrese el departamento" required class="formato">
-                            </div>
+                            </div> -->
 
                             <div class="campos-formulario">
                                 <label>Teléfono</label><br>
