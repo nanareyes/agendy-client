@@ -25,8 +25,9 @@
               <h5>Integrantes Grupo 4</h5><br>
               <li>Yenny Natacha Libreros Montes</li>
               <li>Diana Carolina Reyes Mantillla</li>
-              <li>Irma Zoraida Cardenas Villarraga</li>
-              <li>Camila Acosta Nieto</li>
+              <li>Sonia Milena Mosquera</li>
+              <li>Monica Colorado Romero</li>
+              <li>Christian Alexander Velasco</li>
             </div>
           </div>
         </div>
