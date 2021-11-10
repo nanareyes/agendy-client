@@ -18,7 +18,7 @@
             <b-nav-item right>
               <!-- Using 'button-content' slot -->
               <span>
-                <strong> Bienvenid@ {{ datosUsuario.nombres }}</strong>
+                <strong> Bienvenid@ {{ datosUsuario.name }}</strong>
               </span>
               <b-button
                 size="sm"
