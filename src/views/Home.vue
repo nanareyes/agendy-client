@@ -1,15 +1,15 @@
 <template>
-    <div class="cover-container h-100  flex-column">  
+    <div class="cover-container h-100  flex-column">
 
-        <b-card 
+        <b-card
             overlay
             img-src="https://st4.depositphotos.com/12982378/19880/i/600/depositphotos_198800338-stock-photo-partial-view-woman-receiving-bath.jpg" 
             img-alt="Card Image"
 
         >
             <div class="left-center">
-        
-                <main class="form-signin">   
+
+                <main class="form-signin">
                     <form>
                         <img  class="mb-3" src="@/assets/logo-5.png" alt="" width="300px" height="90px">
                         <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
@@ -25,16 +25,16 @@
                         <!-- <button @click="loginUser()" class= "w-100 btn btn-lg btn-primary btn-action" type="submit">Ingresar</button> -->
                         <input @click="loginUser()" class="w-100 btn btn-lg btn-primary" tabindex="-1" role="button" value="Ingresar">
                     </form>
-                </main>   
+                </main>
                 <div> Si aún no tienes cuenta ingresa aquí:</div><router-link to="/user" class="nav-link mx-4"
                         >Registrarse</router-link>
                 <p class="mt-5 mb-3 text-muted">&copy; Derechos registrados 2021</p>
-                        
+
             </div>
-            
+
         </b-card>
 
-        
+
     </div>
 
 </template>
@@ -54,7 +54,7 @@ export default {
             }
         }
     },
-        
+
     methods: {
         loginUser () {
             axios.post('https://agendy-api.herokuapp.com/login',
@@ -81,9 +81,9 @@ export default {
                                 // Guardar el token decodificado en el localStorage
                                 localStorage.setItem('datosUsuario', JSON.stringify(datosToken.data))
                                 // Del token se lee el tipo de usuario: Cliente o Estilista
-                                const tipo = datosToken.data.tipo
+                                const type = datosToken.data.type
                                 this.$router.push("portafolioServicios")
-                                // if (tipo === 'Estilista') {
+                                // if (type === 'Estilista') {
                                 //     this.$router.push("/")
                                 // } else {
                                 //     this.$router.push("/")

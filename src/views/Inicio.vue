@@ -1,13 +1,12 @@
 <template>
     <div class="portafolioServicios">
         <NavBar />
-        
+
     <div class="card text-center">
             <div class="card-header section-title">
-                Bienvenido a su página principal, {{datosUsuario.nombres}}
+                Bienvenido a su página principal, {{datosUsuario.name}}
             </div>
             <div class="card-body navigations">
-                
                 <div class="row row-cols-1 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card h-100">
@@ -16,7 +15,7 @@
                                 <h5 class="card-title">Esta es tu sección de Servicios</h5>
                                 <p class="card-text">Aquí podrás configurar la presentación de tus servicios y precios</p>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="col ">
@@ -26,7 +25,7 @@
                                 <h5 class="card-title"> Galería</h5>
                                 <p class="card-text">En este espacio podrás configurar y guardar una amplia galería de fotos con todos los estilos de los servicios que ofreces.</p>
                             </div>
-                            
+
 
                         </div>
                     </div>
@@ -37,7 +36,7 @@
                                 <h5 class="card-title">Agenda</h5>
                                 <p class="card-text">En este espacio podrás configurar tu agenda.</p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -66,5 +65,5 @@ export default {
 
 }
 
-<script>
+</script>
 
