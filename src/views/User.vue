@@ -43,7 +43,7 @@
               <div class="campos-formulario">
                 <label>Apellidos</label><br />
                 <input
-                  v-model="user.lastname"
+                  v-model="user.lastName"
                   type="text"
                   id="lastname"
                   name="lastname"
@@ -114,7 +114,7 @@
 
               <div class="campos-formulario">
                 Tipo de usuario
-                <select v-model="user.type">
+                <select v-model="user.userType">
                   <option disabled value="user.type">
                     Seleccione el tipo de usuario
                   </option>
@@ -184,7 +184,7 @@ export default {
       user: {
         identification: "",
         name: "",
-        lastname: "",
+        lastName: "",
         dateOfBirth: "",
         address: "",
         city: "",
@@ -193,7 +193,7 @@ export default {
         email: "",
         password: "",
         password2: "",
-        type: "",
+        userType: "",
         terms: "",
       },
     };
@@ -204,7 +204,7 @@ export default {
       console.log(this.user);
       if (this.user.password === this.user.password2) {
         axios
-          .post("https://agendy-api.herokuapp.com/api/nuevo-user", this.user)
+          .post("https://agendy-api.herokuapp.com/api/new-user", this.user)
           .then((response) => {
             console.log(response);
             let status_peticion = response.status;
